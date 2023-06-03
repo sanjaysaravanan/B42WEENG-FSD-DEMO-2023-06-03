@@ -1,0 +1,94 @@
+
+FSD Demo: Full Stack Development Demo
+
+Use Case 1:
+
+  E-Commerce Site:
+
+    Seller & Buyer Registration:
+      Login Page, Register Page for both seller and customer
+    
+    Seller & Buyer Login:
+      Login Page, Register Page for both seller and customer
+      
+    Buyer/Customer:
+      1. Dashboard with all the Products from Multiple Sellers
+      2. Go to a Product & Add it to Cart
+      3. Cart Page, List of the Products in Cart
+      4. Checkout with Cash on Delivery
+
+    Seller:
+      1. Dashboard which List the total Orders and Sales (amount)
+      2. Products Management Page
+          1. Create Product
+          2. Edit Product
+          3. Delete Product
+      3. Order Page
+          1. Approve and Deliver the Order
+          2. Cancel the Order with Reason
+      4. Seller Profile
+  
+  Product:
+    1. Name
+    2. Id
+    3. Quantity
+    4. Seller
+    5. Product Image
+    6. Price
+  
+  Order:
+    1. Id
+    2. Customer_id
+    3. items:
+        1. product_id
+        2. qty
+    4. Status ---> Pedning, Delivered
+  
+  Cart: ( Temporary Entity for a user )
+    1. Id
+    2. items:
+        1. product_id
+        2. qty
+    3. Totatl_amount
+
+  
+  Seller Details:
+    1. Name
+    2. Email
+    3. GST number
+    4. Password
+    5. Id
+  
+  Customer:
+    1. Name
+    2. Email
+    3. Password
+    4. Id
+
+  Relationships:
+    One Customer --> One Cart
+    One Cart --> Many Products
+    One Order --> Many Products
+    One Customer --> Many Orders
+    One Seller --> Many Products
+    One Seller --> Many Orders
+
+FSD:
+  Step 1: Analyze the use Case, write entities and entity relationship required
+  Step 2: Initial Setup for all the Service ( Front-End, Back-End, Database )
+      Backend:
+        Struture the http server which can create APIs
+      FE:
+        Layout --> Create Pages required for the application
+      DB:
+        Start the mongo server and keep the compass ready
+  Step 3:
+    Setup the .env on both front-end and backend, that communication can happen
+  Step 4:
+    Write logics in FE & BE keeping the functionalities in mind.
+      1. Authentication Mechanism
+      2. Business Logics and Authorization for those
+  
+  In Progress:
+    Business Logics:
+      Main APIs, FE Pages which needs authorization
